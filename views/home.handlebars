@@ -1,0 +1,17 @@
+<h2>Welcome, {{username}}!</h2>
+
+<a href="/logout">Logout</a>
+
+<h3>Your Tasks:</h3>
+
+<ul>
+  {{#each tasks}}
+    <li>{{task_desc}}</li>
+  {{/each}}
+</ul>
+
+<h3>Add a Task</h3>
+<form action="/add-task" method="POST">
+  <input type="text" name="task_desc" required />
+  <input type="submit" value="Add" />
+</form>
